@@ -4,7 +4,7 @@
     "Project": "OpenWeather",
     "ProjectAbbreviationInJira": "OW",
     "LogsFolder": "..\\Logs",
-    "SaveTestResultsToTestArtifactsDb": true,
+    "SaveTestResultsToTestArtifactsDb": false,
     "TestType": "API",
     "LoggingMode": "trace", //none,steps,debug,trace
     "TestArtifactsDbConnectionString": "Data Source=(localdb)\\mssqllocaldb; Initial Catalog = Standprof_TestArtifacts;Trusted_Connection=yes;",

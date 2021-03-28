@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.30028.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Standprof.OpenWeather.Tests.API", "Standprof.OpenWeather.Tests.API\Standprof.OpenWeather.Tests.API.csproj", "{635F1037-2E0E-4D8C-9E05-949762F08933}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{350EF29F-B014-4565-A419-0A351DE4A09C}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

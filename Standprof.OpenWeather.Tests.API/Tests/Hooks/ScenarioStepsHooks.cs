@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Linq;
-using RestSharp;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Standprof.QA.Common;
 using TechTalk.SpecFlow;
 

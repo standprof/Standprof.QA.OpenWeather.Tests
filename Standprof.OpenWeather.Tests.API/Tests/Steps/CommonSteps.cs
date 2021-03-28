@@ -15,8 +15,6 @@ namespace Standprof.OpenWeather.Tests.API.Tests.Steps
         {
             Response.StatusCode.Should().Be(statusCode);
         }
-        
-
         public CommonSteps(ScenarioContext scenarioContext) : base(scenarioContext)
         {
         }

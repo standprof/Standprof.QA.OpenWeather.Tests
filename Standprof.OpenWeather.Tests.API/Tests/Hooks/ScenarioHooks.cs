@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using Standprof.OpenWeather.Tests.API.Tests.Steps;
 using Standprof.QA.Common;
@@ -10,13 +7,13 @@ using TechTalk.SpecFlow;
 namespace Standprof.OpenWeather.Tests.API.Tests.Hooks
 {
     [Binding]
-    class ScenarioHooks:BaseStepsApi
+    internal class ScenarioHooks : BaseStepsApi
     {
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
-        private readonly TestContext _testContext;
 
         private readonly ScenarioLogging _scenarioLogger;
+        private readonly TestContext _testContext;
 
         public ScenarioHooks(ScenarioContext scenarioContext, FeatureContext featureContext) : base(scenarioContext)
         {
@@ -28,6 +25,10 @@ namespace Standprof.OpenWeather.Tests.API.Tests.Hooks
 
 
             _scenarioLogger = new ScenarioLogging(scenarioContext, featureContext);
+        }
+
+        public ScenarioHooks(ScenarioContext scenarioContext) : base(scenarioContext)
+        {
         }
 
         [BeforeScenario(Order = 1)]
@@ -50,15 +51,11 @@ namespace Standprof.OpenWeather.Tests.API.Tests.Hooks
             _testContext.CustomTestLogger().Trace("AfterScenario - LogTestInformation]");
             _scenarioLogger.LogScenarioInformation();
         }
-        
+
         [AfterScenario(Order = 2)]
         public void SaveTestResultsToDb()
         {
             _scenarioLogger.SaveTestResultToAutomatedTestingDatabase();
-        }
-
-        public ScenarioHooks(ScenarioContext scenarioContext) : base(scenarioContext)
-        {
         }
     }
 }

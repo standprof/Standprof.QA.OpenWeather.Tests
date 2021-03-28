@@ -1,5 +1,4 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Newtonsoft.Json;
 using RestSharp;
 using Standprof.OpenWeather.Tests.API.Data.Models;
